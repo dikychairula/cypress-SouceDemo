@@ -1,18 +1,18 @@
-export default class loginPage{
+export default class LoginPage{
   static verifyLoginPage(){
     return cy.get('h5').contains('Login');
   }
   static inputUsername(){
-    return cy.get('[name="username"]');
+    return cy.get('[id="user-name"]');
   }
   static inputPassword(){
-    return cy.get('[name="password"]');
+    return cy.get('[id="password"]');
   }
-  static buttonSubmit(){
-    return cy.get('[type = "submit"]');
-  }
+  static buttonSubmit() {
+    return cy.get('#login-button'); // Menggunakan ID langsung
+  }  
   static verifyDashboardPage(){
-    return cy.get('h6').contains('Dashboard');
+    return cy.get('h6').contains('Products');
   }
   static invalidCredentials(){
     return cy.get('[class="oxd-alert-content oxd-alert-content--error"]');
