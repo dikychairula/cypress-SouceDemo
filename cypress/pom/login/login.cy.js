@@ -9,7 +9,7 @@ export default class LoginPage{
     return cy.get('[id="password"]');
   }
   static buttonSubmit() {
-    return cy.get('#login-button'); // Menggunakan ID langsung
+    return cy.get('#login-button');
   }  
   static verifyDashboardPage(){
     return cy.get('h6').contains('Products');
